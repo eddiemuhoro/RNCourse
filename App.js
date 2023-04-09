@@ -42,7 +42,7 @@ export default function App() {
           secureTextEntry={true} />
         {/* register */}
         <View style={styles.buttons}>
-          <Button title="Login" onPress={handleLogin} />
+          <Button title="Log-in" onPress={handleLogin} />
         </View>
 
       </View>
