@@ -46,7 +46,7 @@ export default function Login() {
           secureTextEntry={true} />
         {/* register */}
         <View style={styles.buttons}>
-          <Button title="Log-in" onPress={handleLogin} />
+          <Button title="Login" onPress={handleLogin} />
         </View>
 
       </View>
@@ -63,7 +63,6 @@ const styles = StyleSheet.create({
     paddingTop: 50,
     paddingHorizontal: 30,
     width: '100%',
-
   },
   inputContainer: {
     alignItems: 'center',
