@@ -27,8 +27,11 @@ const ProductDetailsScreen = ({ route }) => {
   return (
     <View style={styles.container}>
       <Image source={{ uri: product.images[0] }} style={styles.productImage} />
-      <Text style={styles.productName}>{product.name}</Text>
-      <Text style={styles.productPrice}>${product.price}</Text>
+      <View >
+
+        <Text style={styles.productName}>{product.name}</Text>
+        <Text style={styles.productPrice}>${product.price}</Text>
+      </View>
       <Text style={styles.productDescription}>{product.description}</Text>
       <Button style={{width:'100%'}} title="Add to Cart" onPress={() => {}} />
     </View>
@@ -38,15 +41,14 @@ const ProductDetailsScreen = ({ route }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
     padding: 20,
   },
   productImage: {
     width: '100%',
-    height: 300,
+    height: 400,
     marginBottom: 10,
-    objectFit: 'cover',
+    objectFit: 'contain',
+    borderRadius: 10,
   },
   productName: {
     fontSize: 24,
@@ -62,6 +64,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginBottom: 20,
   },
+
 });
 
 export default ProductDetailsScreen;
