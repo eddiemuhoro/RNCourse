@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, Image, StyleSheet, Button } from 'react-native';
+import RelatedProducts from './RelatedProducts';
 
 const ProductDetailsScreen = ({ route }) => {
   const { productId } = route.params;
@@ -34,6 +35,11 @@ const ProductDetailsScreen = ({ route }) => {
       </View>
       <Text style={styles.productDescription}>{product.description}</Text>
       <Button style={{width:'100%'}} title="Add to Cart" onPress={() => {}} />
+
+      <View>
+        <Text>Related Products</Text>
+        <RelatedProducts />
+      </View>
     </View>
   );
 };
