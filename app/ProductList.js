@@ -15,6 +15,16 @@ const ProductList = ({ navigation }) => {
       });
   }, []);
 
+
+  if(!products) {
+    return (
+      <View style={styles.container}>
+
+        <Text>Loading...</Text>
+      </View>
+    );
+  }
+
   const renderItem = ({ item }) => (
     <TouchableOpacity
       style={styles.productItem}
