@@ -1,0 +1,67 @@
+import React, { useState, useEffect } from 'react';
+import { View, Text, Image, StyleSheet, Button } from 'react-native';
+
+const ProductDetailsScreen = ({ route }) => {
+  const { productId } = route.params;
+  const [product, setProduct] = useState(null);
+
+  useEffect(() => {
+    fetch(`https://usella.up.railway.app/product/${productId}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setProduct(data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
+  if (!product) {
+    return (
+      <View style={styles.container}>
+        <Text>Loading...</Text>
+      </View>
+    );
+  }
+
+  return (
+    <View style={styles.container}>
+      <Image source={{ uri: product.images[0] }} style={styles.productImage} />
+      <Text style={styles.productName}>{product.name}</Text>
+      <Text style={styles.productPrice}>${product.price}</Text>
+      <Text style={styles.productDescription}>{product.description}</Text>
+      <Button style={{width:'100%'}} title="Add to Cart" onPress={() => {}} />
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 20,
+  },
+  productImage: {
+    width: '100%',
+    height: 300,
+    marginBottom: 10,
+    objectFit: 'cover',
+  },
+  productName: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  productPrice: {
+    fontSize: 18,
+    color: '#999',
+    marginBottom: 10,
+  },
+  productDescription: {
+    fontSize: 16,
+    marginBottom: 20,
+  },
+});
+
+export default ProductDetailsScreen;
