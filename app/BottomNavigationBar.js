@@ -3,6 +3,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Login from './Login';
 import ProductList from './ProductList';
+import Cart from './Cart';
+import HomeScreen from './HOME/HomeScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -24,15 +26,13 @@ const BottomNavigation = () => {
             marginBottom: 5,
         },
         tabBarStyle: {
-            backgroundColor: '#fff',
-            borderTopWidth: 1,
             with: '100%',
         },
       }}
     >
       <Tab.Screen
         name="Home"
-        component={Login}
+        component={HomeScreen}
         options={{
           tabBarIcon: ({ color }) => (
             <Icon name="home" color={color} size={24} />
@@ -49,11 +49,11 @@ const BottomNavigation = () => {
         }}
       />
       <Tab.Screen
-        name="Settings"
-        component={Login}
+        name="Cart"
+        component={Cart}
         options={{
           tabBarIcon: ({ color }) => (
-            <Icon name="settings" color={color} size={24} />
+            <Icon name="cart" color={color} size={24} />
           ),
         }}
       />
