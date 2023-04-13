@@ -5,6 +5,7 @@ import Login from './Login';
 import ProductList from './ProductList';
 import Cart from './Cart';
 import HomeScreen from './HOME/HomeScreen';
+import MyProfile from './PROFILE/MyProfile';
 
 const Tab = createBottomTabNavigator();
 
@@ -39,15 +40,7 @@ const BottomNavigation = () => {
           ),
         }}
       />
-      <Tab.Screen
-        name="Profile"
-        component={Login}
-        options={{
-          tabBarIcon: ({ color }) => (
-            <Icon name="account" color={color} size={24} />
-          ),
-        }}
-      />
+     
       <Tab.Screen
         name="Cart"
         component={Cart}
@@ -58,11 +51,21 @@ const BottomNavigation = () => {
         }}
       />
       <Tab.Screen
-        name="Notifications"
+        name="Products"
         component={ProductList}
         options={{
           tabBarIcon: ({ color }) => (
             <Icon name="bell" color={color} size={24} />
+          ),
+        }}
+      />
+
+<Tab.Screen
+        name="Profile"
+        component={MyProfile}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <Icon name="account" color={color} size={24} />
           ),
         }}
       />
