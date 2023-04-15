@@ -20,7 +20,7 @@ const BottomNavigation = () => {
           borderTopWidth: 1,
           borderTopColor: '#f2f2f2',
           height: 60,
-          with: 100,
+          width: 100,
         },
         labelStyle: {
             fontSize: 12,
