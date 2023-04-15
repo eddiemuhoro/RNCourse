@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, Image, TouchableOpacity, FlatList, StyleSheet } from 'react-native';
 import axios from 'axios';
 import { useNavigation } from '@react-navigation/native';
+import { Dimensions } from 'react-native';
 const RelatedProducts = () => {
   const [products, setProducts] = useState([]);
   const navigation = useNavigation();
@@ -54,10 +55,9 @@ const RelatedProducts = () => {
 
 const styles = StyleSheet.create({
   listContainer: {
-    flexDirection: 'row',
     // flexWrap: 'wrap',
-    justifyContent: 'space-between',
     marginHorizontal: -5,
+    minHeight: Dimensions.get('window').height + 100,
   },
   productItem: {
     width: '50%',
