@@ -2,12 +2,12 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
-import Login from './app/Login';
+import Login from './app/REGISTRATION/Login';
 import Dashboard from './app/Dashboard';
-import ProductList from './app/ProductList';
-import ProductDetailsScreen from './app/ProductDetailsScreen';
-import BottomNavigation from './app/BottomNavigationBar';
-import RelatedProducts from './app/RelatedProducts';
+import ProductList from './app/PRODUCTS/ProductList';
+import ProductDetailsScreen from './app/PRODUCTS/ProductDetailsScreen';
+import BottomNavigation from './app/NAVIGATION/BottomNavigationBar';
+import RelatedProducts from './app/PRODUCTS/RelatedProducts';
 import { View } from 'react-native';
 
 const Stack = createStackNavigator();

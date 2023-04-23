@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import BottomNavigation from './BottomNavigationBar';
+import BottomNavigation from './NAVIGATION/BottomNavigationBar';
 
 const DashboardScreen = () => {
   return (

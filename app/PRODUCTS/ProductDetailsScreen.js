@@ -3,13 +3,14 @@ import { View, Text, Image, StyleSheet, Button, ScrollView, TouchableOpacity } f
 import RelatedProducts from './RelatedProducts';
 import { Dimensions } from 'react-native';
 import axios from 'axios';
+import apiUrl from '../CONSTANTS/constants';
 
 const ProductDetailsScreen = ({ route }) => {
   const { productId } = route.params;
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    fetch(`https://usella.up.railway.app/product/${productId}`)
+    fetch(`${apiUrl}product/${productId}`)
       .then((response) => response.json())
       .then((data) => {
         setProduct(data);

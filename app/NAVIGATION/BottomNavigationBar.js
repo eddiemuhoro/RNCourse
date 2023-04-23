@@ -1,11 +1,11 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import Login from './Login';
-import ProductList from './ProductList';
-import Cart from './Cart';
-import HomeScreen from './HOME/HomeScreen';
-import MyProfile from './PROFILE/MyProfile';
+import Login from '../REGISTRATION/Login';
+import ProductList from '../PRODUCTS/ProductList';
+import Cart from '../PRODUCTS/CART/Cart';
+import HomeScreen from '../HOME/HomeScreen';
+import MyProfile from '../PROFILE/MyProfile';
 
 const Tab = createBottomTabNavigator();
 

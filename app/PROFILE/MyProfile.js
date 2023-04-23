@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Image, StyleSheet, Text, View, TouchableOpacity, ScrollView, FlatList } from "react-native";
-import ProductList from "../ProductList";
+import ProductList from "../PRODUCTS/ProductList";
 
 const MyProfile = () =>{
 

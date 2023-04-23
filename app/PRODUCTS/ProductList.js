@@ -6,7 +6,7 @@ const ProductList = ({ navigation }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get('https://usella.up.railway.app/product')
+    axios.get('https://usella.fly.dev/product')
       .then(response => {
         setProducts(response.data);
       })
